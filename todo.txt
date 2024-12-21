@@ -1,0 +1,1 @@
+- subir imagens do carousel num bucket para que fiquem melhores

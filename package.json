@@ -1,0 +1,17 @@
+{
+  "name": "blipteste-2024-q4",
+  "version": "1.0.0",
+  "description": "REST API for blip technical test",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcrfrancisco/blipteste-2024-q4"
+  },
+  "author": "Vitor Francisco",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
