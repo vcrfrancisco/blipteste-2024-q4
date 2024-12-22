@@ -62,8 +62,6 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CC0EFE1250D44FB5AF783FED2EB89C94 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_7B778A2554CB458DA31BD651CA20E0B3 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_361803EC57A94CC0A389B52C258EE945 }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PORT: 8080
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
