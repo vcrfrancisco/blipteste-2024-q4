@@ -66,7 +66,7 @@ Para usá-lo no portal da Blip, basta criar um bot ou usar um bot existente e im
 > [!WARNING]  
 > Essa operação substituirá qualquer conteúdo existente dentro do bot aberto no portal
 
-#Links úteis
+# Links úteis
 
 * [Plataforma Blip](https://www.blip.ai) 
 * [Serviços de aplicativo Web da Microsoft Azure](https://azure.microsoft.com/pt-br/products/app-service/web)
