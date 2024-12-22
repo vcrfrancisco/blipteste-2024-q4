@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - blip-test-2024q4
 on:
   push:
     branches:
-      - application
+      - main
     paths:
       - 'api/src/**'
       - '.github/workflows/application_blip-test-2024q4.yml'
