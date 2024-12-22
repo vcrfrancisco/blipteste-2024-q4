@@ -34,11 +34,11 @@ describe('GET /take-repos endpoint', () => {
     describe('Error Handling', () => {
         it('should handle error in API call and return 500', async () => {
             const mockError = new Error('Failed to fetch repositories.')
-            require('../../src/controllers/get-takenet-git-repos/index.js').default.mockRejectedValueOnce(mockError);
+            require('../../src/controllers/get-takenet-git-repos/index.js').default.mockRejectedValueOnce(mockError)
 
             const response = await request(app).get('/take-repos')
 
-            expect(response.status).toBe(500);
+            expect(response.status).toBe(500)
             expect(response.body.message).toBe('Internal Server Error')
             expect(response.body.error).toBe('Failed to fetch repositories.')
         })
@@ -49,7 +49,7 @@ describe('GET /take-repos endpoint', () => {
                 { full_name: 'repo2', language: 'Python', description: 'Python Repo', url: 'http://repo2.com', created_at: '2023-02-01' },
             ]
 
-            require('../../src/controllers/get-takenet-git-repos/requests/takenet-git-repos.js').default.mockResolvedValueOnce(mockRepos);
+            require('../../src/controllers/get-takenet-git-repos/requests/takenet-git-repos.js').default.mockResolvedValueOnce(mockRepos)
 
             const response = await request(app).get('/take-repos')
 
@@ -60,7 +60,7 @@ describe('GET /take-repos endpoint', () => {
 
         it('should return 500 when no repositories are found', async () => {
             const mockRepos = []
-            require('../../src/controllers/get-takenet-git-repos/requests/takenet-git-repos.js').default.mockResolvedValueOnce(mockRepos);
+            require('../../src/controllers/get-takenet-git-repos/requests/takenet-git-repos.js').default.mockResolvedValueOnce(mockRepos)
 
             const response = await request(app).get('/take-repos')
 
