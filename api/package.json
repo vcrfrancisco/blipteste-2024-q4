@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --env-file=.env src/index.js",
-    "test": "test",
+    "test": "jest",
     "dev-api": "ngrok http http://localhost:3000"
   },
   "repository": {
@@ -17,7 +17,11 @@
   "author": "Vitor Francisco",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.26.0",
     "axios": "^1.7.9",
-    "express": "^4.21.2"
+    "babel-jest": "^29.7.0",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
