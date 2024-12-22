@@ -8,7 +8,7 @@ on:
     branches:
       - application
     paths:
-      - 'app/**'
+      - 'api/**'
       - '.github/workflows/application_blip-test-2024q4.yml'
   workflow_dispatch:
 
@@ -26,13 +26,13 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd app
+          cd api
           npm install
           npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: zip -r release.zip ./app/*
+        run: zip -r release.zip ./api/*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -72,6 +72,6 @@ jobs:
         with:
           app-name: 'blip-test-2024q4'
           slot-name: 'Production'
-          package: ./app
+          package: ./api
         
           
