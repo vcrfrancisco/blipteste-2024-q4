@@ -1,11 +1,11 @@
-import express from 'express';
-import getTakenetRepos from './controllers/get-takenet-git-repos/index.js';
+import express from 'express'
+import getTakenetRepos from './controllers/get-takenet-git-repos/index.js'
 
 const app = express()
 
 app.get('/', (req, res) => {
     res.send('teste!')
-});
+})
 
 app.get('/take-repos', async (req, res, next) => {
     try {
@@ -14,7 +14,7 @@ app.get('/take-repos', async (req, res, next) => {
     } catch (error) {
         next(error)
     }
-});
+})
 
 app.use((err, req, res, next) => {
     console.error(err.stack)
@@ -25,4 +25,4 @@ app.use((err, req, res, next) => {
     })
 })
 
-export default app;
+export default app

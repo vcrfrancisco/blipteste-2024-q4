@@ -7,7 +7,7 @@ const getTakenetRepos = async (requestFn = requestTakenetGitRepos) => {
             throw new Error('No repositories found.')
         }
 
-        const oldest_five_csharp_repos = repos.filter(repo => repo.language === 'C#').slice(0, 5);
+        const oldest_five_csharp_repos = repos.filter(repo => repo.language === 'C#').slice(0, 5)
         if (oldest_five_csharp_repos.length === 0) {
             throw new Error('No C# repositories found.')
         }
@@ -23,4 +23,4 @@ const getTakenetRepos = async (requestFn = requestTakenetGitRepos) => {
     }
 }
 
-export default getTakenetRepos;
+export default getTakenetRepos
