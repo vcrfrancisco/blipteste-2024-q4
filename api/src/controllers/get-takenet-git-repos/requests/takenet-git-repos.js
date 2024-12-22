@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const github_token = process.env.GITHUB_TOKEN //TODO: mudar esse trem pra variável de env
+const github_token = process.env.GITHUB_TOKEN
 
 export default async function requestTakenetGitRepos() {
   const response = await axios({
